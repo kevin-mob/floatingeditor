@@ -36,6 +36,10 @@ compile project(':floatingeditor')
             public void onSubmit(String content) {
                 //onSubmit callback
             }
+            @Override
+            public void onAttached(ViewGroup rootView) {
+                //on layout Attached callback
+            }
         }
 
     FloatEditorActivity.openEditor(context, editorListener,
