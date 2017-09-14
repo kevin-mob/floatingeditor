@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Fast Reply Floating Editor</string>
+    <string name="cancel">Cancel</string>
+    <string name="reply1">Reply1</string>
+    <string name="reply2">Reply2</string>
+    <string name="submit">Submit</string>
+    <string name="send">Send</string>
+    <string name="input_hint">Please Input&#8230;</string>
+
+</resources>
