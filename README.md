@@ -21,8 +21,7 @@ compile project(':floatingeditor')
 
 ## 3.代码演示 也可参考demo中的代码
 
-### 1.在布局文件中加入BannerViewPager
-根据实际需求自定义浮动布局文件
+### 1.根据实际需求自定义浮动布局文件
 
 ### 2.调用
 ```java
