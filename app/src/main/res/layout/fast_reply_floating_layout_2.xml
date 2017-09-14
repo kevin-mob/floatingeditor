@@ -2,39 +2,60 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/shape_corner4_white"
     android:gravity="center_vertical"
-    android:orientation="horizontal">
-    <EditText
-        android:id="@+id/et_content"
-        android:textSize="16sp"
-        android:textColor="@android:color/darker_gray"
+    android:orientation="vertical">
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/shape_corner4_blue_border"
-        android:layout_weight="1"
-        android:gravity="top"
-        android:maxLines="4"
-        android:hint="@string/input_hint"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
-        android:textColorHint="#DDDDDD" />
-    <ImageView
-        android:src="@mipmap/grinning_face_1f600"
-        android:paddingRight="16dp"
-        android:paddingLeft="16dp"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent" />
-    <TextView
-        android:id="@+id/tv_submit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:paddingBottom="15dp"
-        android:paddingLeft="20dp"
-        android:textSize="14sp"
-        android:textColor="@android:color/holo_blue_dark"
-        android:paddingRight="20dp"
-        android:paddingTop="15dp"
-        android:text="@string/send" />
+        android:background="@drawable/shape_corner4_white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp">
+
+        <EditText
+            android:id="@+id/et_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_corner4_blue_border"
+            android:gravity="top"
+            android:hint="@string/input_hint"
+            android:maxLines="4"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:textColor="@android:color/darker_gray"
+            android:textColorHint="#DDDDDD"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/iv_face"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:src="@mipmap/grinning_face_1f600" />
+
+        <TextView
+            android:id="@+id/tv_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="15dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="15dp"
+            android:text="@string/send"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_faces"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#EEEEEE"
+        android:visibility="gone" />
 </LinearLayout>

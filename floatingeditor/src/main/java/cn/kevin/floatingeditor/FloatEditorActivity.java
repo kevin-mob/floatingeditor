@@ -20,9 +20,9 @@ public class FloatEditorActivity extends Activity implements View.OnClickListene
     private View cancel;
     private View submit;
     private EditText etContent;
-    private static IEditor mEditorListener;
+    private static EditorCallback mEditorCallback;
     private EditorHolder holder;
-    private boolean isCancelClicked;
+    private boolean isClicked;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +33,7 @@ public class FloatEditorActivity extends Activity implements View.OnClickListene
         setContentView(holder.layoutResId);
         getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         getWindow().setGravity(Gravity.BOTTOM);
+        mEditorCallback.onAttached((ViewGroup) getWindow().getDecorView());
 
         initView();
         setEvent();
@@ -52,13 +53,13 @@ public class FloatEditorActivity extends Activity implements View.OnClickListene
     }
 
 
-    public static void openEditor(Context context, IEditor editorListener, EditorHolder holder){
+    public static void openEditor(Context context, EditorCallback editorCallback, EditorHolder holder){
         Intent intent = new Intent(context, FloatEditorActivity.class);
         if (!(context instanceof Activity)) {
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         }
         intent.putExtra(KEY_EDITOR_HOLDER, holder);
-        mEditorListener = editorListener;
+        mEditorCallback = editorCallback;
         context.startActivity(intent);
     }
 
@@ -66,20 +67,20 @@ public class FloatEditorActivity extends Activity implements View.OnClickListene
     public void onClick(View v) {
         int id = v.getId();
         if(id == holder.cancelViewId){
-            mEditorListener.onCancel();
-            isCancelClicked = true;
+            mEditorCallback.onCancel();
         }else if(id == holder.submitViewId){
-            mEditorListener.onSubmit(etContent.getText().toString());
+            mEditorCallback.onSubmit(etContent.getText().toString());
         }
+        isClicked = true;
         finish();
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if(!isCancelClicked){
-            mEditorListener.onCancel();
+        if(!isClicked){
+            mEditorCallback.onCancel();
         }
-        mEditorListener = null;
+        mEditorCallback = null;
     }
 }
