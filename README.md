@@ -25,7 +25,7 @@ compile project(':floatingeditor')
 
 ### 2.调用
 ```java
-    IEditor editorListener = new IEditor(){
+    EditorCallback editorCallback = new EditorCallback(){
 
             @Override
             public void onCancel() {
@@ -42,7 +42,7 @@ compile project(':floatingeditor')
             }
         }
 
-    FloatEditorActivity.openEditor(context, editorListener,
+    FloatEditorActivity.openEditor(context, editorCallback,
                         new EditorHolder(R.layout.fast_reply_floating_layout,//Custom layout
                                 R.id.tv_cancel, R.id.tv_submit, R.id.et_content));//The cancel view id,submit view id and The submit view id of The Custom layout.
                                 
