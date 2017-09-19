@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="#FFFFFF"
+    android:layout_height="186dp">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:paddingLeft="20dp"
+        android:gravity="center_vertical"
+        android:paddingRight="20dp">
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:textSize="12sp"
+            android:textColor="#71777D"
+            android:text="@string/view_component_button_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_title"
+            android:text=" "
+            android:textColor="#2B333B"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/tv_send"
+            android:textSize="12sp"
+            android:textColor="#71777D"
+            android:text="@string/view_component_button_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#D9DDE1"/>
+    <EditText
+        android:id="@+id/et_write"
+        android:textSize="16sp"
+        android:textColor="#2B333B"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="16dp"
+        android:gravity="top"
+        android:background="@null"
+        android:textCursorDrawable="@null"
+        android:textColorHint="#B7BBBF"
+        android:paddingBottom="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="140dp" />
+</LinearLayout>
