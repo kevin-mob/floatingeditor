@@ -30,4 +30,10 @@
         android:text="@string/reply2"
         android:layout_width="match_parent"
         android:layout_height="40dp" />
+    <Button
+        android:layout_marginTop="30dp"
+        android:id="@+id/bt_reply3"
+        android:text="@string/reply3"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
 </LinearLayout>

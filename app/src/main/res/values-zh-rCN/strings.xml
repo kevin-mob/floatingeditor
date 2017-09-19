@@ -3,6 +3,7 @@
     <string name="cancel">取消</string>
     <string name="reply1">回复1</string>
     <string name="reply2">回复2</string>
+    <string name="reply3">回复3</string>
     <string name="submit">提交</string>
     <string name="send">发送</string>
     <string name="input_hint">请输入&#8230;</string>

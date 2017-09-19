@@ -4,5 +4,13 @@
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowCloseOnTouchOutside">false</item>
+        <item name="android:windowAnimationStyle">@style/view_component_bottom_animation</item>
+    </style>
+
+    <style name="view_component_bottom_animation">
+        <item name="android:activityOpenEnterAnimation">@anim/push_bottom_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/no_change_default</item>
+        <item name="android:activityCloseEnterAnimation">@anim/no_change_default</item>
+        <item name="android:activityCloseExitAnimation">@anim/push_bottom_out</item>
     </style>
 </resources>

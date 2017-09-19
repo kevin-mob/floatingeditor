@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Floating Editor</string>
+    <string name="view_component_button_cancel">取消</string>
+    <string name="view_component_button_send">发送</string>
+    <string name="view_component_limit_min_warn">输入内容不能少于%1$d字</string>
+    <string name="view_component_limit_max_warn">输入内容不能超过%1$d字</string>
 </resources>
